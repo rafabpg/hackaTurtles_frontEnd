@@ -21,6 +21,7 @@ const Register = () => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         console.log({
+          name: data.get('name'),
           email: data.get('email'),
           password: data.get('password'),
         });
@@ -49,10 +50,10 @@ const Register = () => {
             <Grid item xs={12} >
               <TextField
                 autoComplete="given-name"
-                name="Name"
+                name="name"
                 required
                 fullWidth
-                id="Name"
+                id="name"
                 label=" Name"
                 autoFocus
               />
