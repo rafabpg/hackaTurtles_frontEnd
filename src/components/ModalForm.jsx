@@ -55,7 +55,7 @@ const ModalForm = ({ isOpen, onClose }) => {
         <h2>Criar Projeto</h2>
         <TextField
           fullWidth
-          label="Nome do Projeto"
+          label="Titulo do Projeto"
           variant="outlined"
           margin="normal"
           value={projectName}
