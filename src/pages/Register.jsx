@@ -25,6 +25,7 @@ const Register = () => {
           email: data.get('email'),
           password: data.get('password'),
         });
+        window.location.reload()
       };
 
   return (
