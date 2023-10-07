@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -21,12 +21,23 @@ import WorkIcon from '@mui/icons-material/Work';
 import PeopleIcon from '@mui/icons-material/People';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
+import ModalForm from './ModalForm';
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const[modalIsOpen,setModalIsOpen] = useState(false)
+
+  const handleModalFormOpen = () => {
+    setModalIsOpen(true);
+  };
+
+  const handleModalFormClose = () => {
+    setModalIsOpen(false);
+  };
+
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -61,7 +72,7 @@ function ResponsiveDrawer(props) {
           </ListItem>
         ))}
         <ListItem disablePadding>
-          <ListItemButton >
+          <ListItemButton  onClick={handleModalFormOpen}>
             <ListItemIcon>
             <AddBoxIcon />
               </ListItemIcon>
@@ -129,6 +140,7 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box> 
+      <ModalForm  isOpen={modalIsOpen} onClose={handleModalFormClose}/>
     </Box>
   );
 }
