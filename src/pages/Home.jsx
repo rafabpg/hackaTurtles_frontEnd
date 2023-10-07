@@ -1,8 +1,24 @@
+
 import React from 'react'
+import CardComponent from '../components/CardComponent'
+import Slider from "../components/Slider"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      {/* <Sidebar/> */}
+      <Slider>
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+      
+      </Slider>
+    </>
+    // <div>Home</div>
+
   )
 }
 

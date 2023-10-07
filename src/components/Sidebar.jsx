@@ -35,7 +35,7 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <Toolbar>
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center'}}>
       <AcUnitIcon style={{ marginRight: '8px' }} />
         <Typography variant="h6" noWrap>
           TITULO DO SITE
