@@ -2,11 +2,33 @@
 import React from 'react'
 import CardComponent from '../components/CardComponent'
 import Slider from "../components/Slider"
-
+import Toolbar from '@mui/material/Toolbar';
+import Box from '@mui/material/Box';
+const drawerWidth = 240;
 const Home = () => {
+
+
+  const contentStyle = {
+    flexGrow: 1,
+    marginLeft: `${drawerWidth}px`,
+    padding: '20px', 
+  };
+
+  const mobileContentStyle = {
+    flexGrow: 1,
+    padding: '20px', 
+  };
   return (
     <>
-      {/* <Sidebar/> */}
+     <Box
+        component="main"
+        sx={
+          window.innerWidth >= 600
+            ? contentStyle
+            : mobileContentStyle
+        }
+      >
+       <Toolbar />
       <Slider>
           <CardComponent />
           <CardComponent />
@@ -16,8 +38,9 @@ const Home = () => {
           <CardComponent />
       
       </Slider>
+      </Box>
     </>
-    // <div>Home</div>
+    
 
   )
 }
