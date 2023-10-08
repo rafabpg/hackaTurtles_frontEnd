@@ -37,8 +37,8 @@ const Home = () => {
        <Toolbar />
         <div style={{marginLeft:'15px'}}>
           <ReactSearchAutocomplete />
-          <Category />
-          <Category />
+          <Category title="Categoria 1"/>
+          <Category title="Categoria 2"/>
         </div>
       </Box>
     </>
