@@ -22,7 +22,7 @@ const CardComponent = () => {
   
   return (
     <div>
-      <Card  sx={{  width:'400px' }} variant="outlined">{card}</Card>
+      <Card  sx={{  width:'400px', mr:'10px' }} variant="outlined">{card}</Card>
     </div>
   )
 }
