@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Perfil from './pages/Perfil';
+import Project from './pages/Project';
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Route path="/register" element={ <Register /> } />
       <Route path="/login" element={ <Login /> } />
       <Route path="/perfil" element={ <Perfil /> } />
+      <Route path="/meus-projetos" element={ <Project /> } />
   </Routes>
   )
 }

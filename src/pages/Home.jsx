@@ -2,6 +2,9 @@
 import React from 'react'
 import CardComponent from '../components/CardComponent'
 import Slider from "../components/Slider"
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+import Category from '../components/Category'
+
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 const drawerWidth = 240;
@@ -20,6 +23,8 @@ const Home = () => {
   };
   return (
     <>
+
+      
      <Box
         component="main"
         sx={
@@ -27,17 +32,14 @@ const Home = () => {
             ? contentStyle
             : mobileContentStyle
         }
+
       >
        <Toolbar />
-      <Slider>
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-      
-      </Slider>
+        <div style={{marginLeft:'15px'}}>
+          <ReactSearchAutocomplete />
+          <Category title="Categoria 1"/>
+          <Category title="Categoria 2"/>
+        </div>
       </Box>
     </>
     
