@@ -3,11 +3,11 @@ import React from 'react'
 import Slider from './Slider'
 import CardComponent from './CardComponent'
 
-const Category = () => {
+const Category = ({title}) => {
   return (
-    <div style={{margin:'15px 10px'}}>
+    <div style={{margin:'15px 0'}}>
       <Typography sx={{ fontSize: 24, mb:'5px', fontWeight:'600' }} color="text.primary">
-          Categoria
+          {title}
         </Typography>
         <Slider>
           <CardComponent />
